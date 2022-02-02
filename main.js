@@ -68,6 +68,7 @@ const shuffleCards = (cards) => {
   return cards;
 };
 
+// check shuffled deck
 const deck = shuffleCards(getDeck());
 console.log(shuffleCards(getDeck()))
 
@@ -75,16 +76,27 @@ console.log(shuffleCards(getDeck()))
 
 const input = document.querySelector("player1card");
 const input1 = document.querySelector("player2card");
+// const input2 = document.querySelector("deckOfCards");
+const input2 = document.querySelector("announcement");
 
 
 const player2Button = document.getElementById("player2Button");
 const player1Button = document.getElementById("player1Button");
+const player1card = {};
+
+
+let playersTurn = 1;
 
 
 player1Button.addEventListener("click", (event) => {
+  if (playersTurn === 1) {
   event.preventDefault();
-  document.getElementById("player1card").innerHTML = deck.pop();
-  console.log(deck.pop());
+  const player1card = deck.pop();
+  document.getElementById("player1card").innerHTML = player1card;
+  console.log(deck);
+  console.log(player1card);
+  playersTurn = 2;
+}
   
   
 
@@ -92,42 +104,23 @@ player1Button.addEventListener("click", (event) => {
 });
 
 player2Button.addEventListener("click", (event) => {
+  if (playersTurn === 2) {
   event.preventDefault();
-  document.getElementById("player2card").innerHTML = deck.pop();
-  console.log(deck.pop());
+  const player2card = deck.pop();
+  document.getElementById("player2card").innerHTML = player2card;
   console.log(deck);
+  console.log(player2card);
+  // playersTurn = 1;
+
+  if (player1card.score > player2card.score) {
+    document.getElementById("announcement").innerHTML = "Player 1 wins";
+  } else if (player1card.score < player2card.score) {
+    document.getElementById("announcement").innerHTML = "Player 2 wins";
+  } else {
+    document.getElementById("announcement").innerHTML = "Tie";
+  }
+}
 
 
 });
 
-// let playersTurn = 1;
-
-
-
-// // Add an event listener on player 1's button to draw card and switch
-// // to player 2's turn
-// player1Button.addEventListener('click', () => {
-//   if (playersTurn === 1) {
-//     player1Card = deck.pop();
-//     playersTurn = 2;
-//     console.log(player1Card);
-//   }
-  
-// });
-
-// // // Add event listener on player 2's button to draw card and determine winner
-// // // Switch back to player 1's turn to repeat game
-//   player2Button.addEventListener('click', () => {
-//   if (playersTurn === 2) {
-//     const player2Card = deck.pop();
-//     playersTurn = 1;
-
-//     if (player1Card.rank > player2Card.rank) {
-//       output('player 1 wins');
-//     } else if (player1Card.rank < player2Card.rank) {
-//       output('player 2 wins');
-//     } else {
-//       output('tie');
-//     }
-//   }
-// });
