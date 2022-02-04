@@ -36,7 +36,7 @@ const getDeck = () => {
       score = 12;
       if (values[x] == "A") 
       score = 13;
-      const image = (values[x] + suits[i]);
+      const image = `./images/img/` + values[x] + suits[i] + `.png`;
       let card = { Value: values[x], Suit: suits[i], score: score, image: image };
       deck.push(card);
     }
@@ -78,10 +78,11 @@ console.log(shuffleCards(getDeck()))
 
 
 
-const input = document.querySelector("player1card");
+const input = document.querySelector("#player1cardimage");
 const input1 = document.querySelector("player2card");
 // const input2 = document.querySelector("deckOfCards");
 const input2 = document.querySelector("announcement");
+const imageOfCard = document.querySelector("image");
 
 
 const player2Button = document.getElementById("player2Button");
@@ -98,16 +99,21 @@ player1Button.addEventListener("click", (event) => {
   if (playersTurn === 1) {
   event.preventDefault();
   player1card = deck.pop();
-  player1card.append(`<img src="blackjack\images\img\"` + card.image + `.png">`);
-  document.getElementById("player1card").innerHTML = player1card;
+  
+  let image = document.createElement("img");
+  image.setAttribute("src",player1card.image );
+  console.log(image);
+  input.appendChild(image);
+
+  // document.getElementById("player1cardimage").innerHTML = player1card.image;
+  // document.getElementById("imageOfCard").innerHTML = player1card.image;
   console.log(deck);
   console.log(player1card);
   playersTurn = 2;
 }
-console.log(deck);
-console.log(deck[0]);  
+ 
 
-console.log(image);
+
 
 
 });
@@ -116,10 +122,16 @@ player2Button.addEventListener("click", (event) => {
   if (playersTurn === 2) {
   event.preventDefault();
   const player2card = deck.pop();
+
+  let image = document.createElement("img");
+  image.setAttribute("src",player2card.image );
+  console.log(image);
+  input.appendChild(image);
+
   document.getElementById("player2card").innerHTML = player2card;
   console.log(deck);
   console.log(player2card);
-  console.log(player1card);
+  
   playersTurn = 1;
 
   if (player1card.score > player2card.score) {
