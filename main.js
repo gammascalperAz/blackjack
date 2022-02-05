@@ -103,7 +103,7 @@ console.log(shuffleCards(getDeck()))
 
 
 const input = document.querySelector("#player1cardimage");
-const input1 = document.querySelector("player2card");
+const input1 = document.querySelector("#player2cardimage");
 // const input2 = document.querySelector("deckOfCards");
 const input2 = document.querySelector("announcement");
 const imageOfCard = document.querySelector("image");
@@ -155,7 +155,7 @@ player2Button.addEventListener("click", (event) => {
   let image = document.createElement("img");
   image.setAttribute("src",player2card.image );
   console.log(image);
-  input.appendChild(image);
+  input1.appendChild(image);
 
   
   console.log(deck);
@@ -164,16 +164,16 @@ player2Button.addEventListener("click", (event) => {
   playersTurn = 1;
 
   if (player1card.score > player2card.score) {
-    document.getElementById("announcement").innerHTML = "Player 1 wins $10!";
+    document.getElementById("announcement").innerHTML = "Guest wins $100!";
   } else if (player1card.score < player2card.score) {
-    document.getElementById("announcement").innerHTML = "House Wins but you win a drink voucher";
+    document.getElementById("announcement").innerHTML = "House Wins. Guest Wins a bottle!";
     let image = document.createElement("img");
     image.setAttribute("src", "./images/img/drink.png" );
     console.log(image);
     input3.appendChild(image);
 
   } else {
-    document.getElementById("announcement").innerHTML = "Tie";
+    document.getElementById("announcement").innerHTML = "Tie. Press the Guest button to go again.";
   }
 }
 
