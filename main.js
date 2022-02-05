@@ -1,8 +1,32 @@
 // <!-- I want to build a war game with one card play at a time -->
 // <!-- This will be a 1 player game -->
 
+let startDiv = document.getElementById("SplashScreen");
+let gameCanvas = document.getElementById("gameCanvas");
+const startButton = document.getElementById("StartButton");
+let gameOver = document.getElementById("game-over");
 
-const image =document.querySelector("image");
+gameCanvas.style.display = "none";
+
+startButton.addEventListener("click", (event) => {
+  startDiv.style.display = "none";
+  gameCanvas.style.display = "block";
+
+  
+  // gameOver.style.display = "none";
+
+
+})
+
+
+
+
+// // $("#StartButton").click(function () {
+// //   $("#SplashScreen").hide();
+// //   $("#GameCanvas").show();
+// // });
+
+// const image =document.querySelector("image");
 
 
 const suits = ["S", "D", "C", "H"];
@@ -16,7 +40,7 @@ const values = [
   "7",
   "8",
   "9",
-  "10",
+  "0",
   "J",
   "Q",
   "K",
@@ -83,6 +107,7 @@ const input1 = document.querySelector("player2card");
 // const input2 = document.querySelector("deckOfCards");
 const input2 = document.querySelector("announcement");
 const imageOfCard = document.querySelector("image");
+const input3 = document.querySelector("#drinkVoucher");
 
 
 const player2Button = document.getElementById("player2Button");
@@ -99,6 +124,10 @@ player1Button.addEventListener("click", (event) => {
   if (playersTurn === 1) {
   event.preventDefault();
   player1card = deck.pop();
+
+  // we are creating element as variable image 
+  // set up attributes with "src" (could be another variable in a img tag such as "value") and the player1card.image reference
+  // the input.appendChild(image) will display the image within the div as a child element, if you use append doesn't work as it goes on the same level as the div.
   
   let image = document.createElement("img");
   image.setAttribute("src",player1card.image );
@@ -128,16 +157,21 @@ player2Button.addEventListener("click", (event) => {
   console.log(image);
   input.appendChild(image);
 
-  document.getElementById("player2card").innerHTML = player2card;
+  
   console.log(deck);
   console.log(player2card);
   
   playersTurn = 1;
 
   if (player1card.score > player2card.score) {
-    document.getElementById("announcement").innerHTML = "Player 1 wins";
+    document.getElementById("announcement").innerHTML = "Player 1 wins $10!";
   } else if (player1card.score < player2card.score) {
-    document.getElementById("announcement").innerHTML = "Player 2 wins";
+    document.getElementById("announcement").innerHTML = "House Wins but you win a drink voucher";
+    let image = document.createElement("img");
+    image.setAttribute("src", "./images/img/drink.png" );
+    console.log(image);
+    input3.appendChild(image);
+
   } else {
     document.getElementById("announcement").innerHTML = "Tie";
   }

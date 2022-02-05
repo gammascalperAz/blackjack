@@ -1,0 +1,51 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#SplashScreen {
+
+  display: flex;
+  flex-direction: column;
+
+  
+
+  margin: 0px;
+  background-color: lightgoldenrodyellow;
+  color: #313639;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 5px;
+  height: 1200px;
+
+}
+
+.logo {
+  width: 300px;
+  
+}
+
+#StartButton {
+  width: 125px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: medium;
+  
+
+}
+
+h1 {
+
+font-size: 24;
+}
+
+h2 {
+
+  font-size: 16;
+}
+
