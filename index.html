@@ -1,24 +1,72 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blackjack</title>
-  <script src="./main.js" async defer ></script>
-  <link rel="stylesheet" href="./styles.scss">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <script src="./main.js" async defer></script>
+    <link rel="stylesheet" href="./styles.scss" />
+  </head>
 
-  <div id="player1cardimage"></div>
-  <p id="player2card"></p>
-  <button id="player1Button">Player 1 Draw</button>
-  <button id="player2Button">Player 2 Draw</button>
-  <p id="deckOfCards"></p>
-  <p id="announcement"></p>
-  
-  
-  
+  <body>
+    <div id="SplashScreen">
+      <img
+        class="logo"
+        src="./images/img/casinofulllogo.png"
+        alt="pic of venetian logo"
+      />
+      <br />
+      <br />
+      <h1>Free Card Game!</h1>
+      <br />
+      <br />
+      <h2>
+        Welcome to the Venetian Resort. Your comfort and satisfaction are
+        paramount to our focus in delivering the best Las Vegas experience for
+        our guests. As a token of our appreciation we offer you a fun card game.
+        High card or "War" is simple to play. Our guest draw a card and then the
+        house draws a card. Highest card is the winner. If you win the game then
+        you shall win a voucher for $100 in chips from our casino cashier. If
+        you lose you also win. You win a bottle of champange or wine from our
+        curated list. Enjoy yourself.
+      </h2>
+      <br />
+      <h2>Sincerely,</h2>
+      <br />
+      <h2>The Staff at the Venetian</h2>
+      <button id="StartButton" type="button">Play Now!</button>
+    </div>
 
-  <div></div>
-</body>
+    <div id="gameCanvas">
+      <br />
+      <div id="playersButton">
+        <button id="player1Button">Guest Card</button>
+        <button id="player2Button">House Card</button>
+      </div>
+
+      <div id="imageDiv">
+        <div id="player1cardimage"></div>
+        <div id="player2cardimage"></div>
+      </div>
+
+      <!-- <div id="drinkVoucher"></div> -->
+      <p id="deckOfCards"></p>
+      <br />
+      <br />
+      <p id="announcement"></p>
+
+      <img
+        class="logogreen"
+        src="./images/img/pngwing.com.png"
+        alt="venetian logo"
+      />
+      <div class="theWeekndDiv">
+        <img
+          class="theWeeknd"
+          src="./images/img/TheWeeknd.png"
+          alt="pic of upcoming concert"
+        />
+      </div>
+    </div>
+  </body>
 </html>

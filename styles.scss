@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100%;
+}
+
+#SplashScreen {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0px;
+  background-color: lightgoldenrodyellow;
+  color: #313639;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  width: 300px;
+}
+
+#StartButton {
+  width: 125px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+h1 {
+  font-size: 24;
+}
+
+h2 {
+  font-size: 16;
+}
+
+#gameCanvas {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  background-color: #35654d;
+  height: 100%;
+  border: 5px solid #bf9d39;
+}
+
+#playersButton {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#player1Button {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 125px;
+  height: 40px;
+  background-color: #bf9d39;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#player1Button:hover {
+  background-color: #f3d164;
+  color: darkgray;
+}
+
+#player1Button:active {
+  background-color: #f3d164;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#player2Button {
+  margin-right: 20px;
+  width: 125px;
+  height: 40px;
+  background-color: #bf9d39;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#player2Button:hover {
+  background-color: #f3d164;
+  color: darkgray;
+}
+#player2Button:active {
+  background-color: #f3d164;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#imageDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#player1cardimage {
+  margin: 20px;
+}
+
+#player2cardimage {
+  margin: 20px;
+}
+
+#announcement {
+  color: whitesmoke;
+  margin-left: 20px;
+  font-size: 32;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 350px;
+}
+
+.logogreen {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.theWeeknd {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+
+}
+
+// .footer {
+
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-content: space-around;
+//   width:max-content;
+// }
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .theWeekndDiv {
+    display: none;
+  }
+
+}
+
+
+
+
+
+@media screen and (min-width: 767px) {
+  
+  // h1,h2,h3 {
+  //   font-size: 35px;
+  // }
+  
+  // #portfolio {
+  //   display: flex;
+  //   flex-direction: row;
+    
+  // }
+  // nav {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: left;
+    
+    
+  // }
+  // #nav-links {
+  //   width: 50%;
+  //   height: 100%;
+  //   justify-content:left;
+  //   display: flex;
+  //   flex-direction: row;
+  //   font-size: 30px;
+  // }
+  
+}
