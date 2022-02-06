@@ -40,7 +40,7 @@ const values = [
   "7",
   "8",
   "9",
-  "0",
+  "10",
   "J",
   "Q",
   "K",
@@ -107,7 +107,7 @@ const input1 = document.querySelector("#player2cardimage");
 // const input2 = document.querySelector("deckOfCards");
 const input2 = document.querySelector("announcement");
 const imageOfCard = document.querySelector("image");
-const input3 = document.querySelector("#drinkVoucher");
+// const input3 = document.querySelector("#drinkVoucher");
 
 
 const player2Button = document.getElementById("player2Button");
@@ -168,9 +168,9 @@ player2Button.addEventListener("click", (event) => {
   } else if (player1card.score < player2card.score) {
     document.getElementById("announcement").innerHTML = "House Wins. Guest Wins a bottle!";
     let image = document.createElement("img");
-    image.setAttribute("src", "./images/img/drink.png" );
-    console.log(image);
-    input3.appendChild(image);
+    // image.setAttribute("src", "./images/img/drink.png" );
+    // console.log(image);
+    // input3.appendChild(image);
 
   } else {
     document.getElementById("announcement").innerHTML = "Tie. Press the Guest button to go again.";

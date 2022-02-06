@@ -4,11 +4,14 @@
 }
 
 html {
-
+  height: 100%;
   margin: 0;
   padding: 0;
-}
 
+}
+body {
+  min-height: 100%;
+}
 
 
 #SplashScreen {
@@ -21,7 +24,8 @@ html {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 5px;
-  height: 1200px;
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -51,24 +55,28 @@ h2 {
   margin: 0;
 
   background-color: #35654d;
-  height: 1200px;
+  height: 100%;
+  border: 5px solid #bf9d39;
 }
 
 #playersButton {
 
   margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   
 }
 
 #player1Button {
-  margin-right: 25px;
+  margin-right: 20px;
   margin-left: 20px;
   width: 125px;
   height: 40px;
   background-color: #bf9d39;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px #999
 }
 
 #player1Button:hover {
@@ -76,7 +84,7 @@ h2 {
   color: darkgray;
 }
 
-#player2Button:active {
+#player1Button:active {
   background-color: #f3d164;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -102,13 +110,19 @@ h2 {
   transform: translateY(4px);
 }
 
+#imageDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 #player1cardimage {
-  margin: 50px;
+  margin: 20px;
     
 }
 
 #player2cardimage {
-  margin: 50px;
+  margin: 20px;
   
 }
 
@@ -116,13 +130,22 @@ h2 {
   color:whitesmoke;
   margin-left: 20px;
   font-size: 32;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
 
 }
 
 .logogreen {
+  // // display: flex;
+  // // flex-direction: row;
+  // // justify-content: center;
+  // margin-top: auto;
   position: absolute;
-  bottom: 5px;
-  left: 25px;
+  bottom: 10px;
+  left: 30px;
+  
 
 }
+
