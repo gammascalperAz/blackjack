@@ -2,12 +2,15 @@
 #SplashScreen {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  
   margin: 0px;
   background-color: lightgoldenrodyellow;
-  color: black;
+  color: #313639;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 5px;
-
-
+  padding: 15px;
+  height: 99%;
+  width: 100 vh;
 }

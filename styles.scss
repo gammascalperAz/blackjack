@@ -1,5 +1,17 @@
+@import "./SCSS/layouts/body";
+@import "./SCSS/layouts/splashscreen";  
+@import "./SCSS/layouts/gamecanvas";
+@import "./SCSS/layouts/components";
+@import "./SCSS/layouts/mediascreen";
 
-   
+
+
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -13,36 +25,6 @@ html {
 body {
   min-height: 100%;
 }
-
-#SplashScreen {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  
-  margin: 0px;
-  background-color: lightgoldenrodyellow;
-  color: #313639;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 15px;
-  height: 99%;
-  width: 100 vh;
-}
-
-// .logo {
-//   width: 300px;
-  
-// }
-
-#StartButton {
-  width: 125px;
-  height: 50px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  font-size: medium;
-}
-
 h1 {
   font-size: 24;
 }
@@ -63,6 +45,21 @@ h4 {
   
 }
 
+#SplashScreen {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  
+  margin: 0px;
+  background-color: lightgoldenrodyellow;
+  color: #313639;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 15px;
+  height: 99%;
+  width: 100 vh;
+}
 #gameCanvas {
   display: flex;
   flex-direction: column;
@@ -74,6 +71,18 @@ h4 {
   height: 99%;
   border: 5px solid #bf9d39;
 }
+
+#StartButton {
+  width: 125px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+
+
+
 
 #playersButton {
   margin: 10px;
@@ -169,61 +178,12 @@ h4 {
 
 }
 
-// .footer {
-
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-content: space-around;
-//   width:max-content;
-// }
-
-
-
-
-
 @media screen and (max-width: 767px) {
   .theWeekndDiv {
     display: none;
   }
 
 }
-
-
-
-
-
-@media screen and (min-width: 767px) {
-  
-  // h1,h2,h3 {
-  //   font-size: 35px;
-  // }
-  
-  // #portfolio {
-  //   display: flex;
-  //   flex-direction: row;
-    
-  // }
-  // nav {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: left;
-    
-    
-  // }
-  // #nav-links {
-  //   width: 50%;
-  //   height: 100%;
-  //   justify-content:left;
-  //   display: flex;
-  //   flex-direction: row;
-  //   font-size: 30px;
-  // }
-  
-}
-
-
-
 
 
 
