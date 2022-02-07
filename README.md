@@ -1,1 +1,1 @@
-# blackjack
+This is war not blackjack for now. This was a great project in which I was able to use a couple of new functionity learned. It was very satisfying to get the cards to come out of the deck. It is now a game of war but I will revisit and update to the blackjack game orginally scoped. This was fun and I learned how some this application might be relevent to real life. 
