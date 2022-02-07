@@ -1,0 +1,100 @@
+#StartButton {
+  width: 125px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+
+
+
+.logo {
+  width: 300px;
+}
+
+#playersButton {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#player1Button {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 125px;
+  height: 40px;
+  background-color: #bf9d39;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#player1Button:hover {
+  background-color: #f3d164;
+  color: darkgray;
+}
+
+#player1Button:active {
+  background-color: #f3d164;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#player2Button {
+  margin-right: 20px;
+  width: 125px;
+  height: 40px;
+  background-color: #bf9d39;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#player2Button:hover {
+  background-color: #f3d164;
+  color: darkgray;
+}
+#player2Button:active {
+  background-color: #f3d164;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#imageDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#player1cardimage {
+  margin: 20px;
+}
+
+#player2cardimage {
+  margin: 20px;
+}
+
+#announcement {
+  color: whitesmoke;
+  margin-left: 20px;
+  font-size: 32;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 350px;
+}
+
+.logogreen {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.theWeeknd {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+
+}
